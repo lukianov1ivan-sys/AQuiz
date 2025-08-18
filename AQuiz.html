@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Вікторина</title>
+  <style>
+    .correct {
+      background-color: rgb(135, 255, 135);
+      color: black;
+    }
+    .incorrect {
+      background-color: rgb(185, 54, 54);
+      color: yellow;
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+      #answer-buttons {
+        margin-bottom: 20px;
+      }
+      #nxt-btn {
+        margin-top: 40px;
+      }
+      .btn {
+        margin: 5px;
+      }
+      #best-score-display {
+        margin-top: 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+      }
+      #start-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      #quiz-container {
+        display: none;
+      }
+      #start-screen {
+        text-align: center;
+        margin-top: 50px;
+      }
+  </style>
+</head>
+<body>
+  <div id = "start-screen">
+    <h1 id="welcome-title">Ласкаво просимо до вікторини!</h1>
+    <p> Перевір свої знання з географії. Натисни "Почати", щоб почати.</p>
+    <button id="start-btn">Почати</button>
+    <button id="reset-score">Скинути найкращий результат</button>
+    <div id="best-score-display"></div>
+  </div>
+  <div id = "quiz-container">
+    <div id = "timer">Час: 10</div>
+    <h2 id="title">Вікторина</h2>
+    <div id = "question-text"></div>
+    <div id = "answer-buttons"></div>
+    <button id = "nxt-btn" style = "display: none;">Наступне питання</button>
+    <div id = "score"></div>
+    <audio id="correctSound" src = "Correct.wav" preload="auto"></audio>
+    <audio id="incorrectSound" src = "Incorrect.wav" preload="auto"></audio>
+  </div>
+  <script src="AQuizCode.js"></script>
+  <script src="quiz-data.js"></script>
+</body>
+</html>
