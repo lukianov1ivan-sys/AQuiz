@@ -1,3 +1,4 @@
+console.log("quiz-data - запущен");
 export const questions = [
     {
     question: "Яка столиця України?",

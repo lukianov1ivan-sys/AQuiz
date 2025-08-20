@@ -1,5 +1,7 @@
-import { questions } from './quiz-data.js';
-import { shuffleArray, updateBestScore } from './quiz-logic.js';
+console.log("quiz-ui - запущен");
+
+import { updateBestScore } from './quiz-logic.js';
+import { shuffleArray } from './quiz-util.js';
 
 export const questionText = document.getElementById("question-text");
 export const answerButtons = document.getElementById("answer-buttons");

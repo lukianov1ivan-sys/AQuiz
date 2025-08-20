@@ -1,7 +1,8 @@
-console.log("main - файл працює");
+console.log("main - запущен");
 
 import { startButton, nextButton, resetScoreButton, quizContainer, startScreen} from "./quiz-ui.js";
 import { startQuiz, handleNextButton, selectAnswer, resetBestScore, updateBestScore, bestScore} from "./quiz-logic.js";
+
 
 startButton.addEventListener("click", startQuiz);
 resetScoreButton.addEventListener("click", resetBestScore);
@@ -34,7 +35,5 @@ document.addEventListener("keydown", (e) => {
   }
 }
 });
-console.log("click answer");
 document.getElementById("answer-buttons").addEventListener("click", selectAnswer);
-console.log("click answer - done");
 updateBestScore(bestScore);
